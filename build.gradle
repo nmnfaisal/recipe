@@ -5,6 +5,12 @@ buildscript {
     dependencies {
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
     }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
 }
 
 plugins {

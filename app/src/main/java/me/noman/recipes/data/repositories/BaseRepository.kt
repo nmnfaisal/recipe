@@ -4,6 +4,7 @@ import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import me.noman.recipes.data.remote.response.BaseResponse
+import me.noman.recipes.data.remote.response.DrinkResponse
 import me.noman.recipes.data.remote.response.NetworkResult
 import org.json.JSONObject
 import retrofit2.HttpException
@@ -87,5 +88,6 @@ abstract class BaseRepository {
         }
         return sb.toString()
     }
+
 
 }
