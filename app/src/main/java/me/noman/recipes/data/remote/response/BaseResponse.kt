@@ -4,4 +4,4 @@ import kotlinx.serialization.Serializable
 
 
 @Serializable
-data class BaseResponse<T:Any>(val content:T?)
+data class BaseResponse<T:Any>(val code:Int, val message:String, val content:T?)

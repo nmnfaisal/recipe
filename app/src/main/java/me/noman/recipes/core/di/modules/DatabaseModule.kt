@@ -14,6 +14,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 object DatabaseModule {
+
     @Provides
     @Singleton
     fun provideAppDao(
@@ -21,7 +22,9 @@ object DatabaseModule {
         : Context
     ): AppDatabase {
         val dbInstance = Room.databaseBuilder<AppDatabase>(
-            appContext, AppDatabase::class.java, "RecipeDatabase"
+            appContext,
+            AppDatabase::class.java,
+            "RecipeDatabase"
         )
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()

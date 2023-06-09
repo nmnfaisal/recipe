@@ -11,80 +11,95 @@
         android:gravity="center">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp">
+            android:orientation="horizontal"
+            android:weightSum="4">
 
 
-            <ImageView
-                android:id="@+id/drink_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher_round">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
 
 
-            </ImageView>
+                <ImageView
+                    android:id="@+id/drink_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher_round">
+
+
+                </ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/drink_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Drink Name"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/drink_discription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Drink Name"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/isFavorite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:id="@+id/fav_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_fav" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alcohol"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+
+                <CheckBox
+                    android:id="@+id/isAlchoholic"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:checked="true"
+                    android:text="" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="70dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/drink_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Drink Name"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/drink_discription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Drink Name"
-                android:textColor="@color/black"
-                android:textSize="10sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="270dp"
-            android:paddingTop="23dp">
-
-            <ImageButton
-                android:id="@+id/fav_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_not_fav" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="310dp"
-            android:paddingTop="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alcohol"
-                android:textColor="@color/black"
-                android:textSize="10sp" />
-
-            <ImageButton
-                android:id="@+id/alcohol_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_not_fav" />
-
-        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 

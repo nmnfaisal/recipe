@@ -34,7 +34,7 @@ abstract class BaseRepository {
                     // response in ExampleErrorResponse pojo
 //                    val errorResponse: ExampleErrorResponse? = convertErrorBody(response.errorBody())
                     // Simply returning api's own failure message
-                    NetworkResult.Error(errorMessage = "Response is not successful")
+                    NetworkResult.Error(errorMessage = response.body()!!.message)
                 }
 
             } catch (e: HttpException) {
@@ -88,6 +88,5 @@ abstract class BaseRepository {
         }
         return sb.toString()
     }
-
 
 }

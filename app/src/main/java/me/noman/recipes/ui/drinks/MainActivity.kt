@@ -15,15 +15,15 @@ import me.noman.recipes.data.remote.response.DrinkResponse
 import me.noman.recipes.databinding.ActivityMainBinding
 import me.noman.recipes.domain.model.DrinkData
 import me.noman.recipes.ui.drinks.adapter.DrinkAdapter
+import org.json.JSONObject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
-    var drinkData: ArrayList<DrinkData> = ArrayList()
+    var drinkData: ArrayList<Drink> = ArrayList()
     lateinit var drinkList: List<DrinkData>
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,24 +34,26 @@ class MainActivity : AppCompatActivity() {
 
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         val drinkAdapter = DrinkAdapter(this, drinkData)
-        binding.recyclerView.layoutManager = linearLayoutManager
-        binding.recyclerView.adapter = drinkAdapter
+
+        binding.drinkRecyclerView.layoutManager = linearLayoutManager
+        binding.drinkRecyclerView.adapter = drinkAdapter
+
     }
 
     private fun fetchDrinkAPI() {
+
+        viewModel.fetchDrinkList()
+
         lifecycleScope.launch {
-            viewModel.fetchDrinkList()
-            viewModel.fetchDrinkResponse.collectLatest {
-                drinkList = it.map {
-                    DrinkData(it.strDrink, it.strInstructions, it.strDrinkThumb, true, true)
-                }
+            viewModel.drinkList.collectLatest { result ->
+                (binding.drinkRecyclerView.adapter as DrinkAdapter).setList(result)
             }
         }
+
     }
 
     private fun setToolbar() {
         binding.toolbar.heading.text = "Drinks Recipes"
     }
-
 
 }

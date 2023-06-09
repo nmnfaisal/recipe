@@ -16,12 +16,11 @@ class MainViewModel
     val drinkRepo: DrinkRepository
 ) : ViewModel() {
 
-    lateinit var fetchDrinkResponse: Flow<List<Drink>>
+    lateinit var drinkList: Flow<List<Drink>>
 
-    suspend fun fetchDrinkList() {
-        drinkRepo.getDrinkList("Margarita")
-//        drinkRepo.fetchAllPosts("Margarita")
-        fetchDrinkResponse = drinkRepo.fetchDrinkList()
+    fun fetchDrinkList() {
+        drinkRepo.fetchAllPosts("Margarita")
+        drinkList = drinkRepo.fetchDrinkList()
 
     }
 
