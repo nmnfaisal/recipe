@@ -6,49 +6,35 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19bd64a7-bccd-486a-80ef-d808c4241cec" name="Changes" comment="third commit">
-      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/me/noman/recipes/data/local/dao/DrinkDaoTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/base/BaseAdapterRecyclerView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fav.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_not_favorite.xml" afterDir="false" />
+    <list default="true" id="19bd64a7-bccd-486a-80ef-d808c4241cec" name="Changes" comment="api+db+ui+rv done">
+      <change afterPath="$PROJECT_DIR$/app/Android Task TakeHomeAssesment.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/core/di/modules/DatabaseModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/core/di/modules/DatabaseModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/core/di/modules/RetrofitModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/core/di/modules/RetrofitModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/local/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/local/AppDatabase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/local/Dao/DrinkDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/local/Dao/DrinkDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/remote/response/BaseResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/remote/response/BaseResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/remote/response/DrinkResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/remote/response/DrinkResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/remote/services/DrinkService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/remote/services/DrinkService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/repositories/BaseRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/repositories/BaseRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/repositories/DrinkRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/repositories/DrinkRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/domain/model/DrinkData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/base/BaseAdapterRecyclerView.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/MainViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/adapter/DrinkAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/adapter/DrinkAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_add_to_favourite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_not_fav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_add_to_favourite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_not_fav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_add_to_favourite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_not_fav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_add_to_favourite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_not_fav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_add_to_favourite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_not_fav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_to_favourite.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +43,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58T32WGETF]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\noman.faisal\.android\avd\Pixel_5_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -88,7 +74,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;DEBUGGABLE_DEVICE&quot;: &quot;xiaomi-m2010j19sg-d57669120920&quot;,
+    &quot;DEBUGGABLE_DEVICE&quot;: &quot;samsung-sm_a135f-172.16.9.127:5555&quot;,
     &quot;DEBUGGABLE_PROCESS&quot;: &quot;me.noman.recipes&quot;,
     &quot;DEBUGGER_ID&quot;: &quot;Auto&quot;,
     &quot;PROJECT_TRUSTED_KEY&quot;: &quot;true&quot;,
@@ -101,14 +87,17 @@
     &quot;android-custom-viewC:/Users/noman.faisal/AppData/Local/Android/Sdk/sources/android-33/android/widget/CompoundButton.java_SELECTED&quot;: &quot;CompoundButton&quot;,
     &quot;android-custom-viewC:/Users/noman.faisal/AppData/Local/Android/Sdk/sources/android-33/android/widget/TextView.java_SELECTED&quot;: &quot;TextView&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/recipes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/recipes/app&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Dependencies&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2779188&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Android Logcat&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\recipes\app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\recipes\app\src\main\res\drawable" />
     </key>
@@ -216,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684811171713</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="api+db+ui+rv done">
+      <created>1686333694687</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686333694687</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,14 +241,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2 commit" />
     <MESSAGE value="third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
+    <MESSAGE value="api+db+ui+rv done" />
+    <option name="LAST_COMMIT_MESSAGE" value="api+db+ui+rv done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/repositories/DrinkRepository.kt</url>
-          <line>73</line>
+          <line>77</line>
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
@@ -261,34 +258,24 @@
           <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/adapter/DrinkAdapter.kt</url>
-          <line>66</line>
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/adapter/DrinkAdapter.kt</url>
-          <line>31</line>
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/adapter/DrinkAdapter.kt</url>
-          <line>54</line>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/adapter/DrinkAdapter.kt</url>
-          <line>75</line>
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/repositories/DrinkRepository.kt</url>
-          <line>66</line>
+          <line>70</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/adapter/DrinkAdapter.kt</url>
-          <line>81</line>
-          <option name="timeStamp" value="137" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/data/repositories/DrinkRepository.kt</url>
+          <line>52</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/MainActivity.kt</url>
+          <line>41</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/me/noman/recipes/ui/drinks/MainActivity.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="144" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

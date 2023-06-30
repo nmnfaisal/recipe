@@ -17,23 +17,8 @@ import javax.inject.Singleton
 @Module
 object RetrofitModule {
 
+//    private val baseUrl = "https://www.thecocktaildb.com/"
     val timeout = 60L
-
-    @Singleton
-    @Provides
-    fun provideRetrofit( okHttpClient: OkHttpClient ): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
-
-//    val okHttpClient = OkHttpClient.Builder()
-//        .readTimeout(100, TimeUnit.SECONDS)
-//        .connectTimeout(100, TimeUnit.SECONDS)
-//        .build()
 
     @Singleton
     @Provides
@@ -44,18 +29,28 @@ object RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideOkHttpClient(
-        httpLoggingInterceptor: HttpLoggingInterceptor
-    ): OkHttpClient {
+    fun provideOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+
         val httpClientBuilder: OkHttpClient.Builder = OkHttpClient.Builder()
+
         httpClientBuilder
             .connectTimeout(timeout, TimeUnit.SECONDS)
             .readTimeout(timeout, TimeUnit.SECONDS)
             .callTimeout(timeout, TimeUnit.SECONDS)
             .writeTimeout(timeout, TimeUnit.SECONDS)
             .retryOnConnectionFailure(false)
+            .addInterceptor(httpLoggingInterceptor)
 
         return httpClientBuilder.build();
     }
 
+    @Singleton
+    @Provides
+    fun provideRetrofit( okHttpClient: OkHttpClient ): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(okHttpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 }

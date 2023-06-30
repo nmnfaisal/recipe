@@ -63,6 +63,7 @@ data class Drink (
     @SerializedName("strImageSource"              ) var strImageSource              : String?,
     @SerializedName("strImageAttribution"         ) var strImageAttribution         : String?,
     @SerializedName("strCreativeCommonsConfirmed" ) var strCreativeCommonsConfirmed : String?,
-    @SerializedName("dateModified"                ) var dateModified                : String?
+    @SerializedName("dateModified"                ) var dateModified                : String?,
+    @SerializedName("isFavourite"                 ) var isFavourite                 : Boolean?
 
-)
+    )

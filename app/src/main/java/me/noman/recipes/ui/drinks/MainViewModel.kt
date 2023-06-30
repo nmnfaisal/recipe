@@ -24,4 +24,8 @@ class MainViewModel
 
     }
 
+    fun addDrinkToFavourite(idDrink: String, isFavourite: Boolean){
+        drinkRepo.addDrinkToFavourite(idDrink, isFavourite)
+    }
+
 }

@@ -14,6 +14,9 @@ interface DrinkDao{
     @Query("SELECT * FROM DRINK")
     fun getAllDrinks(): Flow<List<Drink>>
 
+    @Query("UPDATE DRINK SET isFavourite=:setFavorite WHERE idDrink=:drinkID")
+    fun addToFav(drinkID: String, setFavorite: Boolean)
+
     @Query("DELETE FROM DRINK")
     fun removeAll()
 

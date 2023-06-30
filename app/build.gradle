@@ -103,9 +103,20 @@ dependencies {
     api 'com.google.dagger:dagger-android-support:2.40'
     kapt 'com.google.dagger:dagger-android-processor:2.23.2'
 
-    //Picaso
+    // Picaso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Plinter (Pretty Logging Interceptor)
+//    implementation("io.github.dkorobtsov.plinter:okhttp-interceptor:5.2.3")
+
+    implementation('com.github.ihsanbal:LoggingInterceptor:3.1.0') {
+        exclude group: 'org.json', module: 'json'
+    }
 }
 
 kapt {

@@ -6,7 +6,7 @@ import me.noman.recipes.data.local.Dao.DrinkDao
 import me.noman.recipes.data.remote.response.Drink
 import javax.inject.Singleton
 
-@Database(entities = [Drink::class], version = 1)
+@Database(entities = [Drink::class], version = 2)
 @Singleton
 abstract class AppDatabase : RoomDatabase(){
 

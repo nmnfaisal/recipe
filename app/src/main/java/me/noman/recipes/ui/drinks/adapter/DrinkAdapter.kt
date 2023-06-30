@@ -1,7 +1,6 @@
 package me.noman.recipes.ui.drinks.adapter
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,20 +12,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import me.noman.recipes.R
 import me.noman.recipes.data.remote.response.Drink
-import me.noman.recipes.databinding.CardViewBinding
-import me.noman.recipes.domain.model.DrinkData
-import retrofit2.http.Url
-import java.net.URL
+import me.noman.recipes.ui.drinks.MainViewModel
 
 class DrinkAdapter(
-    private val context: Context,
-    drinksArrayList: List<Drink>
-) : RecyclerView.Adapter<DrinkAdapter.ViewHolder>() {
+    drinksArrayList: List<Drink>,
+    private val mainViewModel: MainViewModel,
+    ) : RecyclerView.Adapter<DrinkAdapter.ViewHolder>() {
 
     private var drinksArrayList: List<Drink>
-    private var dataSet: List<Drink> = emptyList<Drink>().toMutableList()
 
-
+    // Constructor
+    init {
+        this.drinksArrayList = drinksArrayList
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DrinkAdapter.ViewHolder {
         // to inflate the layout for each item of recycler view.
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.card_view, parent, false)
@@ -41,10 +39,21 @@ class DrinkAdapter(
         Picasso.get().load(model.strDrinkThumb).into(holder.drinkImage)
         holder.drinkTitle.text = model.strDrink
         holder.drinkDiscription.text = model.strInstructions
-//        if(model.getIsFavourite())
-//            holder.isFavourite.setImageResource(R.drawable.ic_fav)
-//        else
-//            holder.isFavourite.setImageResource((R.drawable.ic_not_favorite))
+        if(model.isFavourite == true)
+            holder.isFavourite.setImageResource(R.drawable.ic_fav)
+        else
+            holder.isFavourite.setImageResource((R.drawable.ic_not_favorite))
+
+        holder.isFavourite.setOnClickListener {
+            if(model.isFavourite == true){
+                holder.isFavourite.setImageResource((R.drawable.ic_not_favorite))
+                mainViewModel.addDrinkToFavourite(model.idDrink , false)
+
+            }else{
+                mainViewModel.addDrinkToFavourite(model.idDrink , true)
+                holder.isFavourite.setImageResource(R.drawable.ic_fav)
+            }
+        }
 
         holder.isAlcoholic.isChecked = model.strAlcoholic == "Alcoholic"
     }
@@ -70,12 +79,6 @@ class DrinkAdapter(
             isAlcoholic = itemView.findViewById(R.id.isAlchoholic)
         }
     }
-
-    // Constructor
-    init {
-        this.drinksArrayList = drinksArrayList
-    }
-
 
     @SuppressLint("NotifyDataSetChanged")
     fun setList(it: List<Drink>) {

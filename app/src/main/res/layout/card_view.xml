@@ -21,18 +21,19 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center" >
+                android:gravity="center"
+                android:paddingTop="10dp">
 
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
+
                     android:id="@+id/drink_image"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher_round">
+                    android:src="@drawable/ic_launcher_background">
 
-
-                </ImageView>
+                </de.hdodenhof.circleimageview.CircleImageView>
 
             </LinearLayout>
 
@@ -47,16 +48,19 @@
                     android:id="@+id/drink_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Drink Name"
+                    android:text="@string/drink_name"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="15sp"
+                    android:maxLines="1"/>
                 <TextView
                     android:id="@+id/drink_discription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Drink Name"
+                    android:text="@string/drink_discription"
                     android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textSize="13sp"
+                    android:maxLines="1"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -71,7 +75,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="6dp"
-                    android:src="@drawable/ic_fav" />
+                    android:background="@color/white"
+                    android:src="@drawable/ic_fav"/>
 
             </LinearLayout>
 
@@ -93,7 +98,8 @@
                     android:id="@+id/isAlchoholic"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:checked="true"
+                    android:checked="false"
+                    android:enabled="false"
                     android:text="" />
 
             </LinearLayout>

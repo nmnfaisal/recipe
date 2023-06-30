@@ -49,6 +49,10 @@ class DrinkRepository @Inject constructor(
         return drinkDao.getAllDrinks()
     }
 
+    fun addDrinkToFavourite(idDrink: String, isFavourite: Boolean) {
+        drinkDao.addToFav(idDrink, isFavourite)
+    }
+
     fun fetchAllPosts(searchByName: String) {
         service.fetchAllPosts(searchByName).enqueue(object : Callback<DrinkResponse?> {
             override fun onResponse(

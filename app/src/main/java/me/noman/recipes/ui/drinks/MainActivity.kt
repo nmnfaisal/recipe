@@ -1,6 +1,5 @@
 package me.noman.recipes.ui.drinks
 
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -9,13 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import me.noman.recipes.R
 import me.noman.recipes.data.remote.response.Drink
-import me.noman.recipes.data.remote.response.DrinkResponse
 import me.noman.recipes.databinding.ActivityMainBinding
-import me.noman.recipes.domain.model.DrinkData
 import me.noman.recipes.ui.drinks.adapter.DrinkAdapter
-import org.json.JSONObject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -23,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
     var drinkData: ArrayList<Drink> = ArrayList()
-    lateinit var drinkList: List<DrinkData>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,10 +27,20 @@ class MainActivity : AppCompatActivity() {
         fetchDrinkAPI()
 
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        val drinkAdapter = DrinkAdapter(this, drinkData)
+        val drinkAdapter = DrinkAdapter(drinkData, viewModel)
 
         binding.drinkRecyclerView.layoutManager = linearLayoutManager
         binding.drinkRecyclerView.adapter = drinkAdapter
+
+
+        binding.SwipeRefresh.setOnRefreshListener {
+            binding.SwipeRefresh.isRefreshing = false
+            (binding.drinkRecyclerView.adapter as DrinkAdapter).notifyDataSetChanged()
+        }
+
+        binding.refreshList.setOnClickListener {
+            (binding.drinkRecyclerView.adapter as DrinkAdapter).notifyDataSetChanged()
+        }
 
     }
 
@@ -49,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 (binding.drinkRecyclerView.adapter as DrinkAdapter).setList(result)
             }
         }
-
     }
 
     private fun setToolbar() {
